@@ -1,0 +1,16 @@
+{
+  "name": "@tsparticles/astro-demo",
+  "type": "module",
+  "version": "2.8.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^2.0.1"
+  }
+}
