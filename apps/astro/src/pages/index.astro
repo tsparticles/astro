@@ -1,10 +1,36 @@
 ---
+import Particles from "@tsparticles/astro"
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import type { ISourceOptions } from "@tsparticles/engine";
+
+const options: ISourceOptions = {
+    background: {
+        color: "#000"
+    },
+    fullScreen: {
+        zIndex: -1
+    },
+    particles: {
+        move: {
+            enable: true
+        }
+    }
+};
 ---
+
+<script>
+    import { tsParticles } from "@tsparticles/engine";
+    import { loadFull } from "tsparticles";
+
+    (async () => {
+        await loadFull(tsParticles);
+    })();
+</script>
 
 <Layout title="Welcome to Astro.">
 	<main>
+	    <Particles id="tsparticles" options={options} />
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />

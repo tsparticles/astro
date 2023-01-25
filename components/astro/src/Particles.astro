@@ -1,0 +1,34 @@
+---
+import type { Container, Engine, ISourceOptions } from "@tsparticles/engine";
+
+export interface IParticlesProps {
+    id: string;
+    options?: ISourceOptions;
+    url?: string;
+}
+
+const { id, options, url, particlesInit, particlesLoaded } = Astro.props as IParticlesProps;
+---
+<astro-particles data-id={id} data-options={JSON.stringify(options)} data-url={url}>
+    <canvas></canvas>
+</astro-particles>
+
+<script>
+    import { tsParticles } from "@tsparticles/engine";
+
+    class AstroParticles extends HTMLElement {
+        constructor() {
+            super();
+
+            (async () => {
+                await tsParticles.load({
+                    id: this.dataset.id,
+                    options: JSON.parse(this.dataset.options),
+                    url: this.dataset.url
+                });
+            })();
+        }
+    }
+
+    customElements.define('astro-particles', AstroParticles);
+</script>
