@@ -27,7 +27,7 @@ yarn add astro-particles
 ```astro
 ---
 import Particles from "astro-particles"
-import type { ISourceOptions } from "@tsparticles/engine";
+import type { ISourceOptions } from "tsparticles-engine";
 
 const options: ISourceOptions = {
     background: {
@@ -48,7 +48,7 @@ const options: ISourceOptions = {
 ---
 
 <script>
-    import { tsParticles } from "@tsparticles/engine";
+    import { tsParticles } from "tsparticles-engine";
     import { loadFull } from "tsparticles";
 
     (async () => {
