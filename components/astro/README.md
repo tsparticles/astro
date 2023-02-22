@@ -1,8 +1,8 @@
 [![banner](https://particles.js.org/images/banner3.png)](https://particles.js.org)
 
-# @tsparticles/astro
+# astro-particles
 
-[![npm](https://img.shields.io/npm/v/@tsparticles/astro)](https://www.npmjs.com/package/@tsparticles/astro) [![npm](https://img.shields.io/npm/dm/@tsparticles/astro)](https://www.npmjs.com/package/@tsparticles/astro) [![GitHub Sponsors](https://img.shields.io/github/sponsors/matteobruni)](https://github.com/sponsors/matteobruni)
+[![npm](https://img.shields.io/npm/v/astro-particles)](https://www.npmjs.com/package/astro-particles) [![npm](https://img.shields.io/npm/dm/astro-particles)](https://www.npmjs.com/package/astro-particles) [![GitHub Sponsors](https://img.shields.io/github/sponsors/matteobruni)](https://github.com/sponsors/matteobruni)
 
 Official [tsParticles](https://github.com/matteobruni/tsparticles) Astro component
 
@@ -13,20 +13,20 @@ Official [tsParticles](https://github.com/matteobruni/tsparticles) Astro compone
 ## Installation
 
 ```shell
-npm install @tsparticles/astro
+npm install astro-particles
 ```
 
 or
 
 ```shell
-yarn add @tsparticles/astro
+yarn add astro-particles
 ```
 
 ## How to use
 
 ```astro
 ---
-import Particles from "@tsparticles/astro"
+import Particles from "astro-particles"
 import type { ISourceOptions } from "@tsparticles/engine";
 
 const options: ISourceOptions = {
@@ -37,6 +37,9 @@ const options: ISourceOptions = {
         zIndex: -1
     },
     particles: {
+        number: {
+            value: 100
+        },
         move: {
             enable: true
         }

@@ -1,5 +1,5 @@
 {
-  "name": "@tsparticles/astro-demo",
+  "name": "astro-particles-demo",
   "type": "module",
   "version": "2.8.0",
   "private": true,
@@ -12,9 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@tsparticles/astro": "^2.8.0",
-    "@tsparticles/engine": "^3.0.0-alpha.1",
+    "astro-particles": "^2.9.3",
+    "tsparticles-engine": "^2.9.3",
     "astro": "^2.0.1",
-    "tsparticles": "^3.0.0-alpha.1"
+    "tsparticles": "^2.9.3"
   }
 }

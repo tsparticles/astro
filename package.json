@@ -1,5 +1,5 @@
 {
-  "name": "@tsparticles/astro-workspace",
+  "name": "astro-particles-workspace",
   "version": "0.0.0",
   "private": true,
   "scripts": {

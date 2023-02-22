@@ -1,8 +1,8 @@
 ---
-import Particles from "@tsparticles/astro"
+import Particles from "astro-particles"
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import type { ISourceOptions } from "@tsparticles/engine";
+import type { ISourceOptions } from "tsparticles-engine";
 
 const options: ISourceOptions = {
     background: {
@@ -12,6 +12,9 @@ const options: ISourceOptions = {
         zIndex: -1
     },
     particles: {
+		number: {
+			value: 100
+		},
         move: {
             enable: true
         }
@@ -20,7 +23,7 @@ const options: ISourceOptions = {
 ---
 
 <script>
-    import { tsParticles } from "@tsparticles/engine";
+    import { tsParticles } from "tsparticles-engine";
     import { loadFull } from "tsparticles";
 
     (async () => {
