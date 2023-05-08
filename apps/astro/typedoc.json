@@ -1,0 +1,18 @@
+{
+  "includes": "./markdown",
+  "entryPoints": [
+    "src"
+  ],
+  "exclude": [
+    "**/*.d.ts"
+  ],
+  "entryPointStrategy": "expand",
+  "name": "tsParticles Angular Component",
+  "includeVersion": true,
+  "hideGenerator": true,
+  "out": "./docs",
+  "validation": {
+    "invalidLink": true,
+    "notDocumented": true
+  }
+}
