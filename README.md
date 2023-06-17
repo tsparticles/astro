@@ -37,6 +37,9 @@ const options: ISourceOptions = {
         zIndex: -1
     },
     particles: {
+        number: {
+            value: 100
+        },
         move: {
             enable: true
         }
@@ -45,30 +48,44 @@ const options: ISourceOptions = {
 ---
 
 <script>
-    import { tsParticles } from "tsparticles-engine";
+    import { type Container, type Engine, tsParticles } from "tsparticles-engine";
     import { loadFull } from "tsparticles";
 
-    (async () => {
-        await loadFull(tsParticles);
-    })();
+    // the function name is the parameter passed to the init attribute
+    // required
+    // add the function to window is mandatory, it will be searched there
+    window.particlesInit = async function (engine: Engine) {
+        await loadFull(engine);
+    }
+    
+    // the function name is the parameter passed to the loaded attribute
+    // optional
+    // add the function to window is mandatory, it will be searched there
+    window.particlesLoaded = function (container: Container) {
+        console.log("particlesLoaded callback");
+    }
 </script>
 
-<Particles id="tsparticles" options={options} />
+<Particles id="tsparticles" options={options} init="particlesInit" />
 ```
 
 ### Props
 
-| Prop            | Type     | Definition                                                                                                                                          |
-|-----------------| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id              | string   | The id of the element.                                                                                                                              |
-| options         | object   | The options of the particles instance.                                                                                                              |
-| url             | string   | The remote options url, called using an AJAX request                                                                                                |
+| Prop    | Type   | Definition                                                             |
+|---------|--------|------------------------------------------------------------------------|
+| id      | string | The id of the element.                                                 |
+| init    | string | The name of the function to call when the particles instance is ready. |
+| loaded  | string | The name of the function to call when the particles are loaded.        |
+| options | object | The options of the particles instance.                                 |
+| url     | string | The remote options url, called using an AJAX request                   |
 
 #### particles.json
 
-Find all configuration options [here](https://particles.js.org/docs/interfaces/tsParticles_Engine.Options_Interfaces_IOptions.IOptions.html).
+Find all configuration
+options [here](https://particles.js.org/docs/interfaces/tsParticles_Engine.Options_Interfaces_IOptions.IOptions.html).
 
-You can find sample json configurations [here](https://github.com/matteobruni/tsparticles/tree/main/websites/particles.js.org/presets) 📖
+You can find sample json
+configurations [here](https://github.com/matteobruni/tsparticles/tree/main/websites/particles.js.org/presets) 📖
 
 ## Demos
 
