@@ -2,8 +2,10 @@
 import Particles from "astro-particles";
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import type { ISourceOptions } from "tsparticles-engine";
+import {default as defaultOptions} from "@tsparticles/configs"
 
+// Use your own options or use the default options
+// You can always modify the defaults by { ...defaultOptions.chosenDefault, ...yourOptions }
 const options = {
     background: {
         color: "#fff"
@@ -24,23 +26,17 @@ const options = {
         },
         move: {
             enable: true
+        },
+            hover: {
+            mode: "repulse"
         }
-    }
+    },
+
 };
 ---
-
-<script>
-    import { type Engine, tsParticles } from "tsparticles-engine";
-    import { loadFull } from "tsparticles";
-
-    window.particlesInit = async (engine: Engine) => {
-        await loadFull(engine);
-    };
-</script>
-
 <Layout title="Welcome to Astro.">
     <main>
-        <Particles id="tsparticles" options={options} init="particlesInit" />
+        <Particles id="tsparticles" options={defaultOptions.reactSimple}  />
         <h1>Welcome to <span class="text-gradient">Astro</span></h1>
         <p class="instructions">
             To get started, open the directory <code>src/pages</code> in your project.<br />
