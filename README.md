@@ -19,6 +19,12 @@ npm install astro-particles
 or
 
 ```shell
+pnpm install astro-particles
+```
+
+or
+
+```shell
 yarn add astro-particles
 ```
 
@@ -27,7 +33,7 @@ yarn add astro-particles
 ```astro
 ---
 import Particles from "astro-particles"
-import type { ISourceOptions } from "tsparticles-engine";
+import type { ISourceOptions } from "@tsparticles/engine";
 
 const options: ISourceOptions = {
     background: {
@@ -47,37 +53,15 @@ const options: ISourceOptions = {
 };
 ---
 
-<script>
-    import { type Container, type Engine, tsParticles } from "tsparticles-engine";
-    import { loadFull } from "tsparticles";
-
-    // the function name is the parameter passed to the init attribute
-    // required
-    // add the function to window is mandatory, it will be searched there
-    window.particlesInit = async function (engine: Engine) {
-        await loadFull(engine);
-    }
-    
-    // the function name is the parameter passed to the loaded attribute
-    // optional
-    // add the function to window is mandatory, it will be searched there
-    window.particlesLoaded = function (container: Container) {
-        console.log("particlesLoaded callback");
-    }
-</script>
-
 <Particles id="tsparticles" options={options} init="particlesInit" />
 ```
 
 ### Props
 
-| Prop    | Type   | Definition                                                             |
-|---------|--------|------------------------------------------------------------------------|
-| id      | string | The id of the element.                                                 |
-| init    | string | The name of the function to call when the particles instance is ready. |
-| loaded  | string | The name of the function to call when the particles are loaded.        |
-| options | object | The options of the particles instance.                                 |
-| url     | string | The remote options url, called using an AJAX request                   |
+| Prop    | Type   | Definition                             |
+| ------- | ------ | -------------------------------------- |
+| id      | string | The id of the element.                 |
+| options | object | The options of the particles instance. |
 
 #### particles.json
 

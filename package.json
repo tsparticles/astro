@@ -7,13 +7,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@commitlint/cli": "^17.6.5",
-    "@commitlint/config-conventional": "^17.6.5",
-    "@parcel/core": "^2.9.2",
-    "@parcel/transformer-sass": "^2.9.2",
-    "husky": "^8.0.3",
-    "lerna": "^7.0.2",
-    "parcel": "^2.9.2"
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@parcel/core": "^2.12.0",
+    "@parcel/transformer-sass": "^2.12.0",
+    "husky": "^9.0.11",
+    "lerna": "^8.1.5",
+    "parcel": "^2.12.0"
   },
   "workspaces": [
     "apps/*",
