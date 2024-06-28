@@ -1,36 +1,65 @@
 ---
 import type { ISourceOptions } from "@tsparticles/engine";
-interface Props {
+
+export interface IParticlesProps {
   id: string;
-  options: ISourceOptions;
+  init: string;
+  loaded?: string;
+  options?: ISourceOptions;
+  url?: string;
 }
-const { id, options } = Astro.props;
+
+const { id, init, loaded, options, url } = Astro.props as IParticlesProps;
 ---
 
-<astro-particles data-options={JSON.stringify(options)} id={id}
-></astro-particles>
+<astro-particles
+  data-id={id}
+  data-options={JSON.stringify(options)}
+  data-url={url}
+  data-init={init}
+  data-loaded={loaded}
+>
+</astro-particles>
+
 <script>
-  import { tsParticles, type ISourceOptions } from "@tsparticles/engine";
-  import { loadAll } from "@tsparticles/all";
+  import { tsParticles, type Container } from "@tsparticles/engine";
+
   class AstroParticles extends HTMLElement {
     constructor() {
       super();
-      const options = this.dataset.options || "{}";
-      const id = this.id;
-      const parsedOptions = JSON.parse(options) as ISourceOptions;
-      if (!id) {
-        throw new Error("tsParticles: No id provided");
-      }
-      if (!options) {
-        throw new Error("tsParticles: No config provided");
-      }
-      loadAll(tsParticles);
-      tsParticles.load({
-        id: this.id,
-        options: parsedOptions,
-      });
+
+      (async () => {
+        if (window.hasOwnProperty(this.dataset.init)) {
+          const initFn = window[this.dataset.init];
+
+          if (initFn instanceof Function) {
+            await initFn(tsParticles);
+          }
+        }
+
+        let container: Container | undefined;
+
+        if (this.dataset.url) {
+          container = await tsParticles.load({
+            id: this.dataset.id,
+            url: this.dataset.url,
+          });
+        } else if (this.dataset.options) {
+          container = await tsParticles.load({
+            id: this.dataset.id,
+            options: JSON.parse(this.dataset.options),
+          });
+        }
+
+        if (this.dataset.loaded && window.hasOwnProperty(this.dataset.loaded)) {
+          const loadedFn = window[this.dataset.loaded];
+
+          if (loadedFn instanceof Function) {
+            loadedFn(container);
+          }
+        }
+      })();
     }
   }
-
   customElements.define("astro-particles", AstroParticles);
 </script>

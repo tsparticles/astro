@@ -1,119 +1,189 @@
 ---
-import Particles from "astro-particles";
+import Particles from "@tsparticles/astro";
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import {default as defaultOptions} from "@tsparticles/configs"
+import type { ISourceOptions } from "@tsparticles/engine";
 
-// Use your own options or use the default options
-// You can always modify the defaults by { ...defaultOptions.chosenDefault, ...yourOptions }
-const options = {
-    background: {
-        color: "#fff"
+// options to pass to the component
+const options: ISourceOptions = {
+  interactivity: {
+    events: {
+      onHover: {
+        enable: true,
+        mode: "repulse",
+      },
     },
-    fullScreen: {
-        zIndex: -1
+  },
+  particles: {
+    number: {
+      value: 100,
     },
-    particles: {
-        color: {
-            value: "#000"
-        },
-        links: {
-            color: "#000",
-            enable: true
-        },
-        number: {
-            value: 100
-        },
-        move: {
-            enable: true
-        },
-            hover: {
-            mode: "repulse"
-        }
+    links: {
+      enable: true,
     },
-
+    move: {
+      enable: true,
+    },
+  },
+  themes: [
+    {
+      name: "light",
+      default: {
+        value: true,
+        auto: true,
+        mode: "light",
+      },
+      options: {
+        background: {
+          color: "#ffffff",
+        },
+        particles: {
+          color: {
+            value: "#000000",
+          },
+          links: {
+            color: "#000000",
+          },
+        },
+      },
+    },
+    {
+      name: "dark",
+      default: {
+        value: true,
+        auto: true,
+        mode: "dark",
+      },
+      options: {
+        background: {
+          color: "#000000",
+        },
+        particles: {
+          color: {
+            value: "#ffffff",
+          },
+          links: {
+            color: "#ffffff",
+          },
+        },
+      },
+    },
+  ],
 };
 ---
+
+<script>
+  import type { Engine, Container } from "@tsparticles/engine";
+  import { loadFull } from "tsparticles";
+
+  // the function name is the parameter passed to the init attribute
+  // required
+  // add the function to window is mandatory, it will be searched there
+  window.particlesInit = async function (engine: Engine) {
+    await loadFull(engine);
+  };
+
+  // the function name is the parameter passed to the loaded attribute
+  // optional
+  // add the function to window is mandatory, it will be searched there
+  window.particlesLoaded = function (container: Container) {
+    console.log("particlesLoaded callback", container);
+  };
+</script>
+
 <Layout title="Welcome to Astro.">
-    <main>
-        <Particles id="tsparticles" options={defaultOptions.reactSimple}  />
-        <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-        <p class="instructions">
-            To get started, open the directory <code>src/pages</code> in your project.<br />
-            <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-        </p>
-        <ul role="list" class="link-card-grid">
-            <Card
-                href="https://docs.astro.build/"
-                title="Documentation"
-                body="Learn how Astro works and explore the official API docs."
-            />
-            <Card
-                href="https://astro.build/integrations/"
-                title="Integrations"
-                body="Supercharge your project with new frameworks and libraries."
-            />
-            <Card
-                href="https://astro.build/themes/"
-                title="Themes"
-                body="Explore a galaxy of community-built starter themes."
-            />
-            <Card
-                href="https://astro.build/chat/"
-                title="Community"
-                body="Come say hi to our amazing Discord community. ❤️"
-            />
-        </ul>
-    </main>
+  <main>
+    <Particles
+      id="tsparticles"
+      options={options}
+      init="particlesInit"
+      loaded="particlesLoaded"
+    />
+    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
+    <p class="instructions">
+      To get started, open the directory <code>src/pages</code> in your project.<br
+      />
+      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+    </p>
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="https://docs.astro.build/"
+        title="Documentation"
+        body="Learn how Astro works and explore the official API docs."
+      />
+      <Card
+        href="https://astro.build/integrations/"
+        title="Integrations"
+        body="Supercharge your project with new frameworks and libraries."
+      />
+      <Card
+        href="https://astro.build/themes/"
+        title="Themes"
+        body="Explore a galaxy of community-built starter themes."
+      />
+      <Card
+        href="https://astro.build/chat/"
+        title="Community"
+        body="Come say hi to our amazing Discord community. ❤️"
+      />
+    </ul>
+  </main>
 </Layout>
 
+<!-- targeting global stylesheet to apply css on canvas -->
+<style is:global>
+  #tsparticles > canvas {
+    z-index: -1;
+  }
+</style>
+
 <style>
-    main {
-        margin: auto;
-        padding: 1.5rem;
-        max-width: 60ch;
-    }
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 60ch;
+  }
 
-    h1 {
-        font-size: 3rem;
-        font-weight: 800;
-        margin: 0;
-    }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
 
-    .text-gradient {
-        background-image: var(--accent-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 400%;
-        background-position: 0%;
-    }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
 
-    .instructions {
-        line-height: 1.6;
-        margin: 1rem 0;
-        border: 1px solid rgba(var(--accent), 25%);
-        background-color: white;
-        padding: 1rem;
-        border-radius: 0.4rem;
-    }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
 
-    .instructions code {
-        font-size: 0.875em;
-        font-weight: bold;
-        background: rgba(var(--accent), 12%);
-        color: rgb(var(--accent));
-        border-radius: 4px;
-        padding: 0.3em 0.45em;
-    }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
 
-    .instructions strong {
-        color: rgb(var(--accent));
-    }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
 
-    .link-card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-        gap: 1rem;
-        padding: 0;
-    }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
 </style>

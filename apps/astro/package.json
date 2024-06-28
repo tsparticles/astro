@@ -1,7 +1,7 @@
 {
   "name": "astro-particles-demo",
   "type": "module",
-  "version": "3.40.0",
+  "version": "2.10.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -12,10 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.11.0",
-    "astro-particles": "workspace:^",
-    "@tsparticles/all": "^3.4.0",
-    "@tsparticles/configs": "^3.4.0",
-    "@tsparticles/engine": "^3.4.0"
+    "@tsparticles/astro": "workspace:^",
+    "@tsparticles/engine": "^3.4.0",
+    "astro": "^2.6.4",
+    "tsparticles": "^3.4.0"
   }
 }
