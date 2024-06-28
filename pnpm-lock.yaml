@@ -6851,7 +6851,12 @@ snapshots:
 
   fs.realpath@1.0.0: {}
 
-  fsevents@2.3.3:
+  /fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: false
     optional: true
 
   function-bind@1.1.1: {}
@@ -7154,7 +7159,10 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
-  iconv-lite@0.6.3:
+  /iconv-lite@0.6.3:
+    resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
+    engines: {node: '>=0.10.0'}
+    requiresBuild: true
     dependencies:
       safer-buffer: 2.1.2
     optional: true
@@ -8131,7 +8139,11 @@ snapshots:
 
   node-gyp-build-optional-packages@5.0.6: {}
 
-  node-gyp-build-optional-packages@5.0.7:
+  /node-gyp-build-optional-packages@5.0.7:
+    resolution: {integrity: sha512-YlCCc6Wffkx0kHkmam79GKvDQ6x+QZkMjFGrIMxgFNILFvGSbCp2fCBC55pGTT9gVaz8Na5CLmxt/urtzRv36w==}
+    hasBin: true
+    requiresBuild: true
+    dev: false
     optional: true
 
   node-gyp-build@4.6.0: {}
@@ -8446,7 +8458,10 @@ snapshots:
       - bluebird
       - supports-color
 
-  parcel@2.9.2(@swc/helpers@0.5.1)(postcss@8.4.24)(srcset@4.0.0):
+  /parcel@2.9.2:
+    resolution: {integrity: sha512-nTpT/0JIhGW5rKXVnVGHyLBFK/KxteqzsSjQNzeGybiBttnIYRXnM03e2QJX0GWqiS9OtM4rJro04DNHoqx3Ug==}
+    engines: {node: '>= 12.0.0'}
+    hasBin: true
     dependencies:
       '@parcel/config-default': 2.9.2(@parcel/core@2.9.2)(@swc/helpers@0.5.1)(postcss@8.4.24)(srcset@4.0.0)
       '@parcel/core': 2.9.2
@@ -8833,6 +8848,7 @@ snapshots:
   rollup@3.25.1:
     optionalDependencies:
       fsevents: 2.3.3
+    dev: false
 
   run-applescript@5.0.0:
     dependencies:
@@ -9197,7 +9213,9 @@ snapshots:
       '@tsparticles/updater-twinkle': 3.4.0
       '@tsparticles/updater-wobble': 3.4.0
 
-  tuf-js@1.1.7:
+  /tuf-js@1.1.7:
+    resolution: {integrity: sha512-i3P9Kgw3ytjELUfpuKVDNBJvk4u5bXL6gskv572mcevPbSKCV3zt3djhmlEQ65yERjIbOSncy7U4cQJaB1CBCg==}
+    engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
       '@tufjs/models': 1.0.4
       debug: 4.3.4
@@ -9357,9 +9375,8 @@ snapshots:
       postcss: 8.4.24
       rollup: 3.25.1
     optionalDependencies:
-      '@types/node': 20.3.1
       fsevents: 2.3.3
-      sass: 1.63.4
+    dev: false
 
   vitefu@0.2.4(vite@4.3.9(@types/node@20.3.1)(sass@1.63.4)):
     optionalDependencies:
