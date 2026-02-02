@@ -13,7 +13,7 @@ const { id, init, loaded, options, url } = Astro.props as IParticlesProps;
 ---
 <astro-particles data-id={id} data-options={JSON.stringify(options)} data-url={url} data-init={init}
                  data-loaded={loaded}>
-    <canvas></canvas>
+    <canvas id={id}></canvas>
 </astro-particles>
 
 <script>
