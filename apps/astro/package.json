@@ -12,7 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@tsparticles/astro": "^2.8.0",
+    "@tsparticles/astro": "workspace:^",
     "@tsparticles/engine": "^3.0.0-alpha.1",
     "astro": "^2.0.1",
     "tsparticles": "^3.0.0-alpha.1"
