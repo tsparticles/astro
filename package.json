@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "lerna run build"
+    "build": "pnpm run build:lerna",
+    "build:ci": "lerna run build:ci --stream --no-private || pnpm run build:lerna",
+    "build:lerna": "lerna run build --stream --no-private",
+    "build:nx": "nx run-many -t build --all"
   },
   "license": "MIT",
   "dependencies": {
@@ -13,6 +16,7 @@
     "@parcel/transformer-sass": "^2.8.2",
     "husky": "^8.0.2",
     "lerna": "^6.3.0",
+    "nx": "^20.7.2",
     "parcel": "^2.8.2"
   },
   "workspaces": [
