@@ -53,7 +53,7 @@ const options: ISourceOptions = {
     })();
 </script>
 
-<Particles id="tsparticles" options={options} />
+<Particles id="tsparticles" options={options} class="demo-particles" style="position: fixed; inset: 0; z-index: -1;" />
 ```
 
 ### Props
@@ -63,6 +63,8 @@ const options: ISourceOptions = {
 | id              | string   | The id of the element.                                                                                                                              |
 | options         | object   | The options of the particles instance.                                                                                                              |
 | url             | string   | The remote options url, called using an AJAX request                                                                                                |
+| class           | string   | Optional CSS class applied to the host element.                                                                                                     |
+| style           | string   | Optional inline style applied to the host element.                                                                                                  |
 
 #### particles.json
 

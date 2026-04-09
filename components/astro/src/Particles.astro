@@ -5,11 +5,13 @@ export interface IParticlesProps {
     id: string;
     options?: ISourceOptions;
     url?: string;
+    class?: string;
+    style?: string;
 }
 
-const { id, options, url, particlesInit, particlesLoaded } = Astro.props as IParticlesProps;
+const { id, options, url, class: className, style } = Astro.props as IParticlesProps;
 ---
-<astro-particles data-id={id} data-options={JSON.stringify(options)} data-url={url}>
+<astro-particles class={className} style={style} data-id={id} data-options={options ? JSON.stringify(options) : undefined} data-url={url}>
     <canvas></canvas>
 </astro-particles>
 
@@ -21,14 +23,19 @@ const { id, options, url, particlesInit, particlesLoaded } = Astro.props as IPar
             super();
 
             (async () => {
+                const rawOptions = this.dataset.options;
+                const options = rawOptions ? JSON.parse(rawOptions) : undefined;
+
                 await tsParticles.load({
                     id: this.dataset.id,
-                    options: JSON.parse(this.dataset.options),
+                    options,
                     url: this.dataset.url
                 });
             })();
         }
     }
 
-    customElements.define('astro-particles', AstroParticles);
+    if (!customElements.get("astro-particles")) {
+        customElements.define("astro-particles", AstroParticles);
+    }
 </script>
