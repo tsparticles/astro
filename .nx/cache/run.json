@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "cli run build:ci --stream --no-private",
+    "startTime": "2026-04-09T19:52:14.298Z",
+    "endTime": "2026-04-09T19:52:14.319Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "@tsparticles/astro:build:ci",
+      "target": "build:ci",
+      "projectName": "@tsparticles/astro",
+      "hash": "12784993032701344611",
+      "startTime": "2026-04-09T19:52:14.315Z",
+      "endTime": "2026-04-09T19:52:14.317Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    }
+  ]
+}

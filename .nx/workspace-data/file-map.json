@@ -1,0 +1,145 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.8.4",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "3858646597838013868"
+      },
+      {
+        "file": "package.json",
+        "hash": "6291484362539681332"
+      },
+      {
+        "file": ".husky/.gitignore",
+        "hash": "4575667007673887251"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "14361870659202179179"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "4180010187513017434"
+      },
+      {
+        "file": "nx.json",
+        "hash": "93868292560654171"
+      },
+      {
+        "file": ".github/workflows/nodejs.yml",
+        "hash": "14155952286390008242"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "6755817422983097028"
+      },
+      {
+        "file": ".husky/commit-msg",
+        "hash": "13890091524433070441"
+      },
+      {
+        "file": "README.md",
+        "hash": "16329605037385591505"
+      },
+      {
+        "file": "components/README.ISLAND_PATTERN.md",
+        "hash": "8937605847368992869"
+      },
+      {
+        "file": "lerna.json",
+        "hash": "11374241937184452710"
+      },
+      {
+        "file": "renovate.json",
+        "hash": "15495251679673267221"
+      },
+      {
+        "file": ".github/FUNDING.yml",
+        "hash": "2320204612366203624"
+      }
+    ],
+    "projectFileMap": {
+      "@tsparticles/astro": [
+        {
+          "file": "components/astro/README.md",
+          "hash": "15237299470190835050"
+        },
+        {
+          "file": "components/astro/index.ts",
+          "hash": "15332803473921385437"
+        },
+        {
+          "file": "components/astro/package.json",
+          "hash": "3057634155100223588",
+          "deps": [
+            "npm:@tsparticles/engine"
+          ]
+        },
+        {
+          "file": "components/astro/src/.env.d.ts",
+          "hash": "17949546991706631409"
+        },
+        {
+          "file": "components/astro/src/Particles.astro",
+          "hash": "3726046399579524720"
+        },
+        {
+          "file": "components/astro/tsconfig.json",
+          "hash": "1255661405306055017"
+        }
+      ],
+      "@tsparticles/astro-demo": [
+        {
+          "file": "apps/astro/.gitignore",
+          "hash": "5462055261716489986"
+        },
+        {
+          "file": "apps/astro/README.md",
+          "hash": "7513192907297510491"
+        },
+        {
+          "file": "apps/astro/astro.config.mjs",
+          "hash": "6001195966217725831"
+        },
+        {
+          "file": "apps/astro/package.json",
+          "hash": "2160536083815319933",
+          "deps": [
+            "@tsparticles/astro",
+            "npm:@tsparticles/engine",
+            "npm:astro",
+            "npm:tsparticles"
+          ]
+        },
+        {
+          "file": "apps/astro/public/favicon.svg",
+          "hash": "12424760545971120038"
+        },
+        {
+          "file": "apps/astro/src/components/Card.astro",
+          "hash": "16495495050329927743"
+        },
+        {
+          "file": "apps/astro/src/env.d.ts",
+          "hash": "17949546991706631409"
+        },
+        {
+          "file": "apps/astro/src/layouts/Layout.astro",
+          "hash": "8284403004907145265"
+        },
+        {
+          "file": "apps/astro/src/pages/index.astro",
+          "hash": "17319064203728882695"
+        },
+        {
+          "file": "apps/astro/tsconfig.json",
+          "hash": "11556621870720728499"
+        }
+      ]
+    }
+  }
+}

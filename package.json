@@ -10,14 +10,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0",
-    "@parcel/core": "^2.8.2",
-    "@parcel/transformer-sass": "^2.8.2",
-    "husky": "^8.0.2",
-    "lerna": "^6.3.0",
-    "nx": "^20.7.2",
-    "parcel": "^2.8.2"
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@parcel/core": "^2.16.4",
+    "@parcel/transformer-sass": "^2.16.4",
+    "husky": "^9.1.7",
+    "lerna": "^8.2.4",
+    "nx": "^22.6.4",
+    "parcel": "^2.16.4"
   },
   "workspaces": [
     "apps/*",

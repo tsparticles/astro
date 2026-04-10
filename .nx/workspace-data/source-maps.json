@@ -1,0 +1,658 @@
+{
+  "apps/astro": {
+    "root": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "name": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.1": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.2": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.3": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.4": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.5": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.description": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.executor": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.options": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.options.script": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata.scriptContent": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata.runCommand": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.executor": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.options": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.metadata": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.options.script": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.metadata.scriptContent": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.metadata.runCommand": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.executor": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.script": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.scriptContent": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.runCommand": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:ci": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:ci.executor": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:ci.options": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:ci.metadata": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:ci.options.script": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:ci.metadata.scriptContent": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:ci.metadata.runCommand": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.preview": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.preview.executor": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.preview.options": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.preview.metadata": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.preview.options.script": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.preview.metadata.scriptContent": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.preview.metadata.runCommand": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.astro": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.astro.executor": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.astro.options": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.astro.metadata": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.astro.options.script": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.astro.metadata.scriptContent": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.astro.metadata.runCommand": [
+      "apps/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build:ci.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build:ci.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "components/astro": {
+    "root": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "name": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:public": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:astro": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:astro-integration": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:astro-component": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:front-end": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:frontend": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:tsparticles": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:particles.js": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:particlesjs": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:particles": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:particle": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:canvas": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:jsparticles": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:xparticles": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:particles-js": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:particles-bg": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:particles-bg-vue": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:particles-ts": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:particles.ts": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:@tsparticles/react-js": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:@tsparticles/react.js": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:@tsparticles/react": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:react": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:reactjs": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:vue-particles": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:ngx-particles": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:angular-particles": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:particleground": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:vue": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:vuejs": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:preact": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:preactjs": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:jquery": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:angularjs": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:angular": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:typescript": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:javascript": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:animation": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:web": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:html5": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:web-design": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:webdesign": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:css": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:html": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:css3": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:animated": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:background": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:confetti": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:fireworks": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:fireworks-js": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:confetti-js": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:confettijs": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:fireworksjs": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:canvas-confetti": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.1": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.2": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.description": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.executor": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.script": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.scriptContent": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.runCommand": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:ci": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:ci.executor": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:ci.options": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:ci.metadata": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:ci.options.script": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:ci.metadata.scriptContent": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:ci.metadata.runCommand": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prepack": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prepack.executor": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prepack.options": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prepack.metadata": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prepack.options.script": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prepack.metadata.scriptContent": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prepack.metadata.runCommand": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.executor": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.dependsOn": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.options": [
+      "components/astro/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build:ci.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build:ci.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  }
+}
