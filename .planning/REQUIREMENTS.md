@@ -9,9 +9,9 @@ Requirements for initial release hardening. Each maps to exactly one roadmap pha
 
 ### Build and Packaging
 
-- [ ] **BLD-01**: Maintainer can run one CI build command that produces publishable package artifacts for `@tsparticles/astro`.
-- [ ] **BLD-02**: Maintainer can verify package tarball contents before publish (exports, files, and types are present and correct).
-- [ ] **BLD-03**: Maintainer can detect dependency major-version drift between `components/astro` and `apps/astro` in CI.
+- [x] **BLD-01**: Maintainer can run one CI build command that produces publishable package artifacts for `@tsparticles/astro`.
+- [x] **BLD-02**: Maintainer can verify package tarball contents before publish (exports, files, and types are present and correct).
+- [x] **BLD-03**: Maintainer can detect dependency major-version drift between `components/astro` and `apps/astro` in CI.
 
 ### Runtime Safety
 
@@ -55,9 +55,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| BLD-01 | Phase 1 | Pending |
-| BLD-02 | Phase 1 | Pending |
-| BLD-03 | Phase 1 | Pending |
+| BLD-01 | Phase 1 | Complete |
+| BLD-02 | Phase 1 | Complete |
+| BLD-03 | Phase 1 | Complete |
 | RUN-01 | Phase 2 | Pending |
 | RUN-02 | Phase 2 | Pending |
 | RUN-03 | Phase 2 | Pending |

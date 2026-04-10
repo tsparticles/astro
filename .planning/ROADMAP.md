@@ -30,9 +30,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Establish canonical fail-fast `pnpm build:ci` pipeline with toolchain precheck and real package artifact build outputs.
-- [ ] 01-02-PLAN.md — Add strict tarball exports/files/types validation with committed expected-manifest drift enforcement.
-- [ ] 01-03-PLAN.md — Implement major-version dependency drift enforcement between package and demo and wire into canonical CI gate.
+- [x] 01-01-PLAN.md — Establish canonical fail-fast `pnpm build:ci` pipeline with toolchain precheck and real package artifact build outputs.
+- [x] 01-02-PLAN.md — Add strict tarball exports/files/types validation with committed expected-manifest drift enforcement.
+- [x] 01-03-PLAN.md — Implement major-version dependency drift enforcement between package and demo and wire into canonical CI gate.
 
 ### Phase 2: Runtime Safety Guards
 **Goal**: Users can use `Particles` safely even with malformed inputs or repeated mount/unmount cycles.
