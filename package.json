@@ -6,7 +6,8 @@
     "build": "pnpm run build:lerna",
     "ci:toolchain": "node scripts/ci/verify-toolchain.mjs",
     "ci:validate-tarball": "node scripts/ci/validate-tarball.mjs",
-    "build:ci": "pnpm run ci:toolchain && pnpm --filter @tsparticles/astro run build:ci && pnpm --filter @tsparticles/astro-demo run build:ci && pnpm run ci:validate-tarball",
+    "ci:check-dependency-drift": "node scripts/ci/check-dependency-drift.mjs",
+    "build:ci": "pnpm run ci:toolchain && pnpm --filter @tsparticles/astro run build:ci && pnpm --filter @tsparticles/astro-demo run build:ci && pnpm run ci:validate-tarball && pnpm run ci:check-dependency-drift",
     "build:lerna": "lerna run build --stream --no-private",
     "build:nx": "nx run-many -t build --all"
   },

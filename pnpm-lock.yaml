@@ -39,8 +39,8 @@ importers:
         specifier: workspace:^
         version: link:../../components/astro
       '@tsparticles/engine':
-        specifier: ^3.9.1
-        version: 3.9.1
+        specifier: ^4.0.0-beta.11
+        version: 4.0.0-beta.11
       astro:
         specifier: ^6.1.5
         version: 6.1.5(@types/node@20.5.1)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(sass@1.99.0)(typescript@5.9.3)(yaml@2.8.3)
@@ -51,8 +51,8 @@ importers:
   components/astro:
     dependencies:
       '@tsparticles/engine':
-        specifier: ^3.9.1
-        version: 3.9.1
+        specifier: ^4.0.0-beta.11
+        version: 4.0.0-beta.11
 
 packages:
 
@@ -1569,6 +1569,9 @@ packages:
 
   '@tsparticles/engine@3.9.1':
     resolution: {integrity: sha512-DpdgAhWMZ3Eh2gyxik8FXS6BKZ8vyea+Eu5BC4epsahqTGY9V3JGGJcXC6lRJx6cPMAx1A0FaQAojPF3v6rkmQ==}
+
+  '@tsparticles/engine@4.0.0-beta.11':
+    resolution: {integrity: sha512-vFMGxE46VCnOwxic3JzrPE+HCLwpP4MEXFL9weySMXwltnljNFeSoGb87mtltacc2kyl/bBOg+yx0HF/JzgRyw==}
 
   '@tsparticles/interaction-external-attract@3.9.1':
     resolution: {integrity: sha512-5AJGmhzM9o4AVFV24WH5vSqMBzOXEOzIdGLIr+QJf4fRh9ZK62snsusv/ozKgs2KteRYQx+L7c5V3TqcDy2upg==}
@@ -6395,6 +6398,8 @@ snapshots:
       '@tsparticles/updater-size': 3.9.1
 
   '@tsparticles/engine@3.9.1': {}
+
+  '@tsparticles/engine@4.0.0-beta.11': {}
 
   '@tsparticles/interaction-external-attract@3.9.1':
     dependencies:

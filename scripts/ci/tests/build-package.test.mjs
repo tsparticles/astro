@@ -17,6 +17,7 @@ test("build-package generates dist entry and declarations", () => {
   const result = run();
 
   assert.equal(result.status, 0, result.stderr || result.stdout);
+  assert.match(result.stdout, /src\/Particles\.astro/);
 });
 
 test("build-package verify mode fails when required artifact is missing", () => {
