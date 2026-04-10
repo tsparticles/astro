@@ -22,7 +22,7 @@ test("exits 0 when shared runtime dependency majors match", () => {
     const componentPath = join(tempDir, "component.json");
     const appPath = join(tempDir, "app.json");
 
-    writeJson(componentPath, { dependencies: { "@tsparticles/engine": "^4.2.0", foo: "^1.0.0" } });
+    writeJson(componentPath, { dependencies: { "@tsparticles/engine": "^4.2.0", foo: "^4.0.0" } });
     writeJson(appPath, { dependencies: { "@tsparticles/engine": "~4.9.1", foo: "4.5.0" } });
 
     const result = run(componentPath, appPath);
