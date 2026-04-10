@@ -5,7 +5,8 @@
   "scripts": {
     "build": "pnpm run build:lerna",
     "ci:toolchain": "node scripts/ci/verify-toolchain.mjs",
-    "build:ci": "pnpm run ci:toolchain && pnpm --filter @tsparticles/astro run build:ci && pnpm --filter @tsparticles/astro-demo run build:ci",
+    "ci:validate-tarball": "node scripts/ci/validate-tarball.mjs",
+    "build:ci": "pnpm run ci:toolchain && pnpm --filter @tsparticles/astro run build:ci && pnpm --filter @tsparticles/astro-demo run build:ci && pnpm run ci:validate-tarball",
     "build:lerna": "lerna run build --stream --no-private",
     "build:nx": "nx run-many -t build --all"
   },
