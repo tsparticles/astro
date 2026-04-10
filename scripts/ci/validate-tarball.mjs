@@ -7,6 +7,7 @@ import { dirname, resolve } from "node:path";
 const rootDir = resolve(import.meta.dirname, "..", "..");
 const packageDir = resolve(rootDir, "components", "astro");
 const packageJsonPath = resolve(packageDir, "package.json");
+const expectedManifestPath = resolve(rootDir, "scripts", "ci", "tarball-expected-manifest.json");
 
 const args = process.argv.slice(2);
 const argValue = (name) => args.find((arg) => arg.startsWith(`${name}=`))?.slice(name.length + 1);
@@ -73,10 +74,21 @@ const allowlist = new Set(requiredFiles);
 const missingFiles = requiredFiles.filter((file) => !packedFiles.has(file));
 const unexpectedFiles = [...packedFiles].filter((file) => !allowlist.has(file));
 
-const ok = missingFiles.length === 0 && unexpectedFiles.length === 0;
+const expectedManifest = JSON.parse(readFileSync(expectedManifestPath, "utf8"));
+const expectedFiles = new Set(Array.isArray(expectedManifest.files) ? expectedManifest.files : []);
+const currentFiles = new Set([...packedFiles]);
+
+const addedFromSnapshot = [...currentFiles].filter((file) => !expectedFiles.has(file)).sort();
+const removedFromSnapshot = [...expectedFiles].filter((file) => !currentFiles.has(file)).sort();
+
+const ok =
+  missingFiles.length === 0 &&
+  unexpectedFiles.length === 0 &&
+  addedFromSnapshot.length === 0 &&
+  removedFromSnapshot.length === 0;
 const summary = ok
   ? `Tarball validation passed (${packedFiles.size} files checked)`
-  : `Tarball validation failed (${missingFiles.length} missing, ${unexpectedFiles.length} unexpected)`;
+  : `Tarball validation failed (${missingFiles.length} missing, ${unexpectedFiles.length} unexpected, ${addedFromSnapshot.length} added, ${removedFromSnapshot.length} removed)`;
 
 const report = {
   ok,
@@ -88,7 +100,10 @@ const report = {
   requiredFiles,
   packedFiles: [...packedFiles].sort(),
   missingFiles: missingFiles.sort(),
-  unexpectedFiles: unexpectedFiles.sort()
+  unexpectedFiles: unexpectedFiles.sort(),
+  expectedManifestPath,
+  addedFromSnapshot,
+  removedFromSnapshot
 };
 
 mkdirSync(dirname(reportPath), { recursive: true });
@@ -110,7 +125,18 @@ if (!ok) {
     }
   }
 
+  if (addedFromSnapshot.length > 0 || removedFromSnapshot.length > 0) {
+    console.error("   snapshot drift:");
+    for (const file of addedFromSnapshot) {
+      console.error(`   + ${file}`);
+    }
+    for (const file of removedFromSnapshot) {
+      console.error(`   - ${file}`);
+    }
+  }
+
   console.error(`   report: ${reportPath}`);
+  console.error("   remediation: if this drift is intentional, regenerate scripts/ci/tarball-expected-manifest.json with the approved tarball file list in sorted order.");
   process.exit(1);
 }
 

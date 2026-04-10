@@ -1,0 +1,15 @@
+{
+  "package": "@tsparticles/astro",
+  "version": "2.8.0",
+  "files": [
+    "README.md",
+    "dist/CHANGELOG.md",
+    "dist/LICENSE",
+    "dist/README.md",
+    "dist/index.d.ts",
+    "dist/index.js",
+    "dist/package.json",
+    "dist/src/Particles.astro",
+    "package.json"
+  ]
+}
