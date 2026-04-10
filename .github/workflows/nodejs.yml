@@ -28,34 +28,22 @@ jobs:
       #  uses: nrwl/nx-set-shas@v3
       - uses: actions/setup-node@v4
         with:
-          node-version: '16'
-      - uses: pnpm/action-setup@v2.2.4
+          node-version-file: .nvmrc
+      - name: Resolve pnpm version from packageManager
+        id: resolve-pnpm
+        run: |
+          node -e "const pkg=require('./package.json'); const pm=pkg.packageManager || ''; if(!pm.startsWith('pnpm@')) { throw new Error('packageManager must be pnpm@<version>'); } const version=pm.slice(5).split('+')[0]; process.stdout.write('version=' + version);" >> "$GITHUB_OUTPUT"
+      - uses: pnpm/action-setup@v4
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 8
+          version: ${{ steps.resolve-pnpm.outputs.version }}
           run_install: false
-      - name: Get pnpm version
-        id: pnpm-version
-        run: |
-          echo "$(pnpm --version)"
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-      - run: pnpm install
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
       #- run: npx nx-cloud start-ci-run
       #- run: pnpm run prettify:ci:readme
-      - run: npx lerna run build:ci #--concurrency 3
+      - run: pnpm build:ci
       #- run: npx nx-cloud stop-all-agents
   pr:
     runs-on: ubuntu-latest
@@ -70,34 +58,22 @@ jobs:
       #  uses: nrwl/nx-set-shas@v3
       - uses: actions/setup-node@v4
         with:
-          node-version: '16'
-      - uses: pnpm/action-setup@v2.2.4
+          node-version-file: .nvmrc
+      - name: Resolve pnpm version from packageManager
+        id: resolve-pnpm
+        run: |
+          node -e "const pkg=require('./package.json'); const pm=pkg.packageManager || ''; if(!pm.startsWith('pnpm@')) { throw new Error('packageManager must be pnpm@<version>'); } const version=pm.slice(5).split('+')[0]; process.stdout.write('version=' + version);" >> "$GITHUB_OUTPUT"
+      - uses: pnpm/action-setup@v4
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 8
+          version: ${{ steps.resolve-pnpm.outputs.version }}
           run_install: false
-      - name: Get pnpm version
-        id: pnpm-version
-        run: |
-          echo "$(pnpm --version)"
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-      - run: pnpm install
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
       #- run: npx nx-cloud start-ci-run
       #- run: pnpm run prettify:ci:readme
-      - run: npx lerna run build:ci #--concurrency 3
+      - run: pnpm build:ci
       #- run: npx nx-cloud stop-all-agents
       - run: echo ${{ github.repository_owner }}
       - run: echo ${{ github.actor }}

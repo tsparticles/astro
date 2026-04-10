@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "pnpm run build:lerna",
-    "build:ci": "lerna run build:ci --stream --no-private || pnpm run build:lerna",
+    "ci:toolchain": "node scripts/ci/verify-toolchain.mjs",
+    "build:ci": "pnpm run ci:toolchain && pnpm --filter @tsparticles/astro run build:ci && pnpm --filter @tsparticles/astro-demo run build:ci",
     "build:lerna": "lerna run build --stream --no-private",
     "build:nx": "nx run-many -t build --all"
   },
