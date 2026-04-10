@@ -55,24 +55,24 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| BLD-01 | Phase [N] | Pending |
-| BLD-02 | Phase [N] | Pending |
-| BLD-03 | Phase [N] | Pending |
-| RUN-01 | Phase [N] | Pending |
-| RUN-02 | Phase [N] | Pending |
-| RUN-03 | Phase [N] | Pending |
-| TST-01 | Phase [N] | Pending |
-| TST-02 | Phase [N] | Pending |
-| TST-03 | Phase [N] | Pending |
-| REL-01 | Phase [N] | Pending |
-| REL-02 | Phase [N] | Pending |
-| REL-03 | Phase [N] | Pending |
+| BLD-01 | Phase 1 | Pending |
+| BLD-02 | Phase 1 | Pending |
+| BLD-03 | Phase 1 | Pending |
+| RUN-01 | Phase 2 | Pending |
+| RUN-02 | Phase 2 | Pending |
+| RUN-03 | Phase 2 | Pending |
+| TST-01 | Phase 3 | Pending |
+| TST-02 | Phase 3 | Pending |
+| TST-03 | Phase 3 | Pending |
+| REL-01 | Phase 4 | Pending |
+| REL-02 | Phase 4 | Pending |
+| REL-03 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 12 total
-- Mapped to phases: 0
-- Unmapped: 12 ⚠
+- Mapped to phases: 12
+- Unmapped: 0 ✅
 
 ---
 *Requirements defined: 2026-04-10*
-*Last updated: 2026-04-10 after initial definition*
+*Last updated: 2026-04-10 after roadmap creation*
